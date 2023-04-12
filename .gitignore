@@ -40,3 +40,4 @@ package-lock.json
 
 # storybook
 storybook-static
+build-storybook.log

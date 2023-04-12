@@ -49,6 +49,12 @@ module.exports = {
           300: '#FFF2F2',
           hover: '#ED2121',
         },
+        font: {
+          100: '#181818',
+          200: '#5C5C5C',
+          300: '#747474',
+          disabled: '#8A8A8A',
+        },
         dark: {
           light: '#282828',
           darken: '#1C1C1C',
@@ -85,20 +91,12 @@ module.exports = {
             300: '#FBDFDF',
             hover: '#ED2F2F',
           },
-        },
-      },
-      textColor: {
-        light: {
-          100: '#181818',
-          200: '#5C5C5C',
-          300: '#747474',
-          disabled: '#8A8A8A',
-        },
-        dark: {
-          100: '#D9D9D9',
-          200: '#9D9D9D',
-          300: '#5C5C5C',
-          disabled: '#8B8B8B',
+          font: {
+            100: '#D9D9D9',
+            200: '#9D9D9D',
+            300: '#5C5C5C',
+            disabled: '#8B8B8B',
+          },
         },
       },
       fontFamily: {

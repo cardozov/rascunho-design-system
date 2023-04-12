@@ -1,0 +1,23 @@
+import { Canvas, Meta, Primary, Controls } from '@storybook/blocks'
+
+import * as LinkStories from './Link.stories'
+
+<Meta of={LinkStories} />
+
+# Link
+
+<p>Link is a clickable interactive element that triggers a redirection.</p>
+<p>You can place text and icons inside of a link.</p>
+<p>Links are often used for internal or external navigation.</p>
+
+## Variants:
+
+### Default
+
+<Primary />
+
+### Disabled
+
+<Canvas of={LinkStories.Disabled} />
+
+<Controls include={['size', 'children', 'disabled']} />

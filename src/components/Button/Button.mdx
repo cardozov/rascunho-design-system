@@ -1,0 +1,29 @@
+import { Canvas, Meta, Primary, Controls } from '@storybook/blocks'
+
+import * as ButtonStories from './Button.stories'
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<p>Button is a clickable interactive element that triggers an action.</p>
+<p>You can place text and icons inside of a button.</p>
+<p>
+  Buttons are often used for form submissions and to toggle elements into view.
+</p>
+
+## Variants:
+
+### Default
+
+<Primary />
+
+### Disabled
+
+<Canvas of={ButtonStories.Disabled} />
+
+<Controls />
+
+### Extension
+
+If the desired action is redirecting the user, the best component is the [Link](?path=/story/Link--docs)

@@ -5,20 +5,15 @@ import Button, { type ButtonProps } from './Button'
 const meta: Meta<ButtonProps> = {
   title: 'Button',
   component: Button,
-  tags: ['autodocs'],
   id: 'button',
   argTypes: {
     variant: {
-      control: {
-        type: 'select',
-        options: ['primary', 'secondary'],
-      },
+      options: ['primary', 'secondary', 'tertiary'],
+      control: { type: 'inline-radio' },
     },
     size: {
-      control: {
-        type: 'select',
-        options: ['sm', 'md', 'lg'],
-      },
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'inline-radio' },
     },
     disabled: {
       control: {
@@ -31,8 +26,15 @@ const meta: Meta<ButtonProps> = {
 export default meta
 type Story = StoryObj<ButtonProps>
 
-export const Example: Story = {
+export const Default: Story = {
   args: {
     children: 'Action',
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    children: 'Action',
+    disabled: true,
   },
 }

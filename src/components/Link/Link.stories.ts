@@ -5,14 +5,11 @@ import Link, { type LinkProps } from './Link'
 const meta: Meta<LinkProps> = {
   title: 'Link',
   component: Link,
-  tags: ['autodocs'],
   id: 'link',
   argTypes: {
     size: {
-      control: {
-        type: 'select',
-        options: ['sm', 'default'],
-      },
+      options: ['sm', 'default'],
+      control: { type: 'inline-radio' },
     },
     disabled: {
       control: {
@@ -25,8 +22,15 @@ const meta: Meta<LinkProps> = {
 export default meta
 type Story = StoryObj<LinkProps>
 
-export const Example: Story = {
+export const Default: Story = {
   args: {
     children: 'Link',
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    children: 'Link',
+    disabled: true,
   },
 }
