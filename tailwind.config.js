@@ -65,7 +65,7 @@ module.exports = {
             400: '#4264DF',
             hover: '#244AD0',
             active: '#244DDF0',
-          }, 
+          },
           secondary: {
             100: '#FFC2A0',
             200: '#FFAB7C',

@@ -1,6 +1,17 @@
 {
   "extends": [
     "next/core-web-vitals",
+    "prettier",
     "plugin:storybook/recommended"
-  ]
+  ],
+  "settings": {
+    "next": {
+      "rootDir": "."
+    }
+  },
+  "rules": {
+    "semi": "off",
+    "semi-style": "off",
+    "react/react-in-jsx-scope": "off"
+  }
 }

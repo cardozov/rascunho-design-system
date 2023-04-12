@@ -1,11 +1,11 @@
-import type { Preview } from "@storybook/react"
+import type { Preview } from '@storybook/react'
 
 import '../src/styles/globals.css'
 
 const preview: Preview = {
   parameters: {
     layout: 'centered',
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -19,15 +19,15 @@ const preview: Preview = {
           name: 'Light',
           class: [],
           color: '#ffffff',
-          default: true
+          default: true,
         },
         {
           name: 'Dark',
           class: ['dark'],
-          color: '#000000'
-        }
-      ]
-    }
+          color: '#000000',
+        },
+      ],
+    },
   },
 }
 

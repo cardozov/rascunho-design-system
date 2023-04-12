@@ -14,8 +14,11 @@
     "typescriptreact"
   ],
   "tailwindCSS.experimental.classRegex": [
-      [ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" ], // cva
-      [ "[classNames|classnames]\\(([^)]*)\\)", "\\{([^}]*)\\}*", "[\"'`]([^\"'`]*).*?[\"'`]" ], // classNames
-      "(?:enter|leave)(?:From|To)?=\\s*(?:\"|'|{`)([^(?:\"|'|`})]*)" // Headless UI
+    {
+      "pattern": "cva\\(\\s*['\"]([^'\"]*)['\"]",
+      "lookup": {
+        "1": "class"
+      }
+    }
   ]
 }
