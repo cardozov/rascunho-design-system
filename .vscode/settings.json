@@ -14,11 +14,7 @@
     "typescriptreact"
   ],
   "tailwindCSS.experimental.classRegex": [
-    {
-      "pattern": "cva\\(\\s*['\"]([^'\"]*)['\"]",
-      "lookup": {
-        "1": "class"
-      }
-    }
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    "classNames\\(([^\\)]*)"
   ]
 }

@@ -8,11 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
         light: '#FFFFFF',
         darken: '#F8F8F8',
@@ -105,6 +100,25 @@ module.exports = {
       fontSize: {
         '2xs': '.625rem',
         '3xs': '.5rem',
+      },
+      borderRadius: {
+        sm: '4px',
+        md: '8px',
+        lg: '16px',
+      },
+      spacing: {
+        /* 1px */ '1/4': 'calc(0.25rem/4)',
+        /* 2px */ '1/2': 'calc(0.25rem/2)',
+        /* 4px */ 1: '0.25rem',
+        /* 8px */ 2: '0.5rem',
+        /* 12px */ 3: '0.75rem',
+        /* 16px */ 4: '1rem',
+        /* 20px */ 5: '1.25rem',
+        /* 24px */ 6: '1.5rem',
+        /* 32px */ 7: '2rem',
+        /* 40px */ 8: '2.5rem',
+        /* 48px */ 9: '3rem',
+        /* 56px */ 10: '3.5rem',
       },
     },
   },
