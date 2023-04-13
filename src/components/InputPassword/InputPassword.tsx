@@ -19,10 +19,10 @@ const InputPassword = ({ className, ...rest }: InputPasswordProps) => {
       <Input
         type={showPassword ? 'text' : 'password'}
         className={classNames('form-input w-full', className)}
-        onChange={console.log}
         {...rest}
       />
       <InputIcon
+        name="eye-icon"
         className="absolute right-4 top-5 h-4 w-4 cursor-pointer fill-font-300"
         onClick={toggleShowPassword}
       />

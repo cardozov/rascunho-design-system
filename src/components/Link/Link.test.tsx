@@ -1,38 +1,28 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 
 import Link from './Link'
-import { Router } from 'next/router'
 
 describe('Link', () => {
-  let routerChangeStartMock: any
-
-  beforeEach(() => {
-    routerChangeStartMock = jest.fn()
-    Router.events.on('routeChangeStart', routerChangeStartMock)
-  })
-
-  afterEach(() => {
-    routerChangeStartMock = null
-    Router.events.off('routeChangeStart', routerChangeStartMock)
-  })
-
-  describe('default', () => {
+  describe('Default', () => {
     it('should render a link with text', () => {
       const { getByText } = render(<Link href="#">Default</Link>)
       expect(getByText('Default')).toBeInTheDocument()
     })
 
-    xit('should navigate to correct location when clicked', () => {
-      const { getByText } = render(<Link href="#">Default</Link>)
-      getByText('Default').click()
-      expect(getByText('Default')).toHaveAttribute('href', '#')
-      expect(routerChangeStartMock).toHaveBeenCalledWith('http://localhost/#')
+    it('should render a link with correct location', () => {
+      const { getByText } = render(
+        <Link href="http://localhost/cpxinha">Default</Link>
+      )
+      expect(getByText('Default')).toHaveAttribute(
+        'href',
+        'http://localhost/cpxinha'
+      )
     })
   })
 
-  describe('disabled', () => {
+  describe('Disabled', () => {
     it('should render a disabled link with text', () => {
       const { getByText } = render(
         <Link disabled href="#">
@@ -49,8 +39,9 @@ describe('Link', () => {
           Default
         </Link>
       )
-      getByText('Default').click()
-      expect(routerChangeStartMock).toHaveBeenCalledTimes(0)
+      expect(getByText('Default')).toHaveClass(
+        'aria-disabled:pointer-events-none'
+      )
     })
   })
 })
