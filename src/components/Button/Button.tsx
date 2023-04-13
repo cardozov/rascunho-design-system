@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
 
 const buttonVariants = cva(
-  'outline-none rounded-lg font-semibold focus:border-[2px] focus:border-secondary-400 disabled:text-font-disabled',
+  'outline-none rounded-md font-semibold focus:border-[2px] focus:border-secondary-400 disabled:text-font-disabled',
   {
     variants: {
       variant: {
