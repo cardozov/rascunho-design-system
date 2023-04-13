@@ -1,0 +1,35 @@
+import { Canvas, Meta, Primary, Controls } from '@storybook/blocks'
+
+import * as InputStories from './Input.stories'
+
+<Meta of={InputStories} />
+
+# Input
+
+<p>Input is an interactive element that accept text as entry.</p>
+<p>You can describe better an Input using placeholder and side description.</p>
+<p> Inputs are often used inside forms to get values from the user.</p>
+
+## Variants:
+
+### Default
+
+<Primary />
+
+### Disabled
+
+<Canvas of={InputStories.Disabled} />
+
+### Error
+
+<Canvas of={InputStories.Error} />
+
+### Success
+
+<Canvas of={InputStories.Success} />
+
+### With description
+
+<Canvas of={InputStories.WithDescription} />
+
+<Controls />
