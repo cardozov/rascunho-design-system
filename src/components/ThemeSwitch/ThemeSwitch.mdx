@@ -1,0 +1,26 @@
+import { Canvas, Meta, Primary, Controls } from '@storybook/blocks'
+
+import * as ThemeSwitchStories from './ThemeSwitch.stories'
+
+<Meta of={ThemeSwitchStories} />
+
+# Theme Switch
+
+<p>
+  ThemeSwitch is a clickable interactive element that wraps the theme toggling
+  action.
+</p>
+<p>ThemeSwitches are often used for providing a visual theme switcher.</p>
+<p>
+  When enabled it refers to the<b> DARK MODE </b>and when disabled
+  <b> LIGHT MODE </b>
+</p>
+
+## Variants:
+
+### Common
+
+<Primary />
+<Canvas of={ThemeSwitchStories.Light} />
+
+<Controls />
