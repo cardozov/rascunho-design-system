@@ -1,7 +1,6 @@
 {
   "name": "design-system-draft",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0-development",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +11,9 @@
     "chromatic": "npx chromatic --project-token=f13976c29306 --exit-zero-on-changes",
     "format": "prettier --write .",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -47,6 +48,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/testing-library__jest-dom": "^5.14.5",
     "chromatic": "^6.17.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.3",
@@ -56,9 +58,19 @@
     "postcss-loader": "^7.2.4",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7",
+    "semantic-release": "^21.0.1",
     "storybook": "^7.0.2",
     "storybook-addon-themes": "^6.1.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "design-system-draft@0.1.0"
+  "_id": "design-system-draft@0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cardozov/rascunho-design-system.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
